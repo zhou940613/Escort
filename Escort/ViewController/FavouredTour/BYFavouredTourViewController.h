@@ -8,6 +8,13 @@
 
 #import "BYBaseViewController.h"
 
-@interface BYFavouredTourViewController : BYBaseViewController
+@interface BYFavouredTourViewController : BYBaseViewController<UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UIView *headContainerView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *headBannerImg;
+@property (weak, nonatomic) IBOutlet UICollectionView *headCollectionView;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

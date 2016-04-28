@@ -50,7 +50,7 @@
     [self showSplashViewController];
     
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject];
-    NSLog(@"%@", path);
+//    NSLog(@"%@", path);
     
     return YES;
 }

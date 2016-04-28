@@ -7,7 +7,7 @@
 //
 
 #import "BYCustomNavigation.h"
-
+#import "BYDefined.h"
 @interface BYCustomNavigation ()
 
 @end
@@ -30,7 +30,7 @@
     UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.navigationBar.frame), [[UIScreen mainScreen] bounds].size.width, 0.5)];
     line.backgroundColor = [UIColor lightGrayColor];
     [self.navigationBar addSubview:line];
-    
+    self.navigationBar.barTintColor = Rgb2UIColor(73, 73, 73);
 }
 
 #pragma mark -- Override Push Method

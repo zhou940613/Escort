@@ -8,6 +8,7 @@
 
 #import "BYBaseViewController.h"
 
-@interface BYFindViewController : BYBaseViewController
+@interface BYFindViewController : BYBaseViewController<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableViewFind;
 
 @end

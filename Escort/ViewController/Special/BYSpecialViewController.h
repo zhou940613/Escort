@@ -8,6 +8,8 @@
 
 #import "BYBaseViewController.h"
 
-@interface BYSpecialViewController : BYBaseViewController
+@interface BYSpecialViewController : BYBaseViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableViewSpecial;
 
 @end

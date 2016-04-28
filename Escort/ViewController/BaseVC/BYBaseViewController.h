@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "BYCustomNavigation.h"
+#import "BYDefined.h"
+#import <AFNetworking.h>
+#import "UIImageView+WebCache.h"
+#import "BYCustomTools.h"
 
 @interface BYBaseViewController : UIViewController
 
