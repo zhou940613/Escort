@@ -100,6 +100,14 @@
 		1838B9901CCF0E9F00BF2523 /* BYSpecialContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1838B98F1CCF0E9F00BF2523 /* BYSpecialContent.m */; };
 		1838B9941CCF143800BF2523 /* BYSpecialCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1838B9921CCF143800BF2523 /* BYSpecialCell.m */; };
 		1838B9951CCF143800BF2523 /* BYSpecialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1838B9931CCF143800BF2523 /* BYSpecialCell.xib */; };
+		186215911CD44B9A00CD8611 /* BYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862158F1CD44B9A00CD8611 /* BYWebViewController.m */; };
+		186215921CD44B9A00CD8611 /* BYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186215901CD44B9A00CD8611 /* BYWebViewController.xib */; };
+		186215961CD4614400CD8611 /* BYSpecialDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186215941CD4614400CD8611 /* BYSpecialDetailViewController.m */; };
+		186215971CD4614400CD8611 /* BYSpecialDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186215951CD4614400CD8611 /* BYSpecialDetailViewController.xib */; };
+		1862159B1CD463CC00CD8611 /* BYFindDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186215991CD463CC00CD8611 /* BYFindDetailViewController.m */; };
+		1862159C1CD463CC00CD8611 /* BYFindDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1862159A1CD463CC00CD8611 /* BYFindDetailViewController.xib */; };
+		186215A01CD465D100CD8611 /* BYHotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862159E1CD465D100CD8611 /* BYHotelViewController.m */; };
+		186215A11CD465D100CD8611 /* BYHotelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1862159F1CD465D100CD8611 /* BYHotelViewController.xib */; };
 		1871815D1CCB0EC90092F755 /* navigation3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1871815C1CCB0EC90092F755 /* navigation3.png */; };
 		187181641CCB10CF0092F755 /* BYSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187181621CCB10CF0092F755 /* BYSplashViewController.m */; };
 		187181651CCB10CF0092F755 /* BYSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187181631CCB10CF0092F755 /* BYSplashViewController.xib */; };
@@ -264,6 +272,18 @@
 		1838B9911CCF143800BF2523 /* BYSpecialCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYSpecialCell.h; sourceTree = "<group>"; };
 		1838B9921CCF143800BF2523 /* BYSpecialCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYSpecialCell.m; sourceTree = "<group>"; };
 		1838B9931CCF143800BF2523 /* BYSpecialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYSpecialCell.xib; sourceTree = "<group>"; };
+		1862158E1CD44B9A00CD8611 /* BYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYWebViewController.h; sourceTree = "<group>"; };
+		1862158F1CD44B9A00CD8611 /* BYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYWebViewController.m; sourceTree = "<group>"; };
+		186215901CD44B9A00CD8611 /* BYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYWebViewController.xib; sourceTree = "<group>"; };
+		186215931CD4614400CD8611 /* BYSpecialDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYSpecialDetailViewController.h; sourceTree = "<group>"; };
+		186215941CD4614400CD8611 /* BYSpecialDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYSpecialDetailViewController.m; sourceTree = "<group>"; };
+		186215951CD4614400CD8611 /* BYSpecialDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYSpecialDetailViewController.xib; sourceTree = "<group>"; };
+		186215981CD463CC00CD8611 /* BYFindDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYFindDetailViewController.h; sourceTree = "<group>"; };
+		186215991CD463CC00CD8611 /* BYFindDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYFindDetailViewController.m; sourceTree = "<group>"; };
+		1862159A1CD463CC00CD8611 /* BYFindDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYFindDetailViewController.xib; sourceTree = "<group>"; };
+		1862159D1CD465D100CD8611 /* BYHotelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYHotelViewController.h; sourceTree = "<group>"; };
+		1862159E1CD465D100CD8611 /* BYHotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYHotelViewController.m; sourceTree = "<group>"; };
+		1862159F1CD465D100CD8611 /* BYHotelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYHotelViewController.xib; sourceTree = "<group>"; };
 		1871815C1CCB0EC90092F755 /* navigation3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation3.png; sourceTree = "<group>"; };
 		187181611CCB10CF0092F755 /* BYSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYSplashViewController.h; sourceTree = "<group>"; };
 		187181621CCB10CF0092F755 /* BYSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYSplashViewController.m; sourceTree = "<group>"; };
@@ -600,6 +620,9 @@
 				18D071B91CC9CBF5003C2DF7 /* BYCustomNavigation.m */,
 				18D071BB1CC9CC63003C2DF7 /* BYMainViewController.h */,
 				18D071BC1CC9CC63003C2DF7 /* BYMainViewController.m */,
+				1862158E1CD44B9A00CD8611 /* BYWebViewController.h */,
+				1862158F1CD44B9A00CD8611 /* BYWebViewController.m */,
+				186215901CD44B9A00CD8611 /* BYWebViewController.xib */,
 			);
 			path = BaseVC;
 			sourceTree = "<group>";
@@ -669,6 +692,9 @@
 				182686C61CD05A38001A2F48 /* BYFindCell.h */,
 				182686C71CD05A38001A2F48 /* BYFindCell.m */,
 				182686C81CD05A38001A2F48 /* BYFindCell.xib */,
+				186215981CD463CC00CD8611 /* BYFindDetailViewController.h */,
+				186215991CD463CC00CD8611 /* BYFindDetailViewController.m */,
+				1862159A1CD463CC00CD8611 /* BYFindDetailViewController.xib */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -691,6 +717,9 @@
 				18190F041CCE05B100248633 /* BYTravelCell.h */,
 				18190F051CCE05B100248633 /* BYTravelCell.m */,
 				18190F061CCE05B100248633 /* BYTravelCell.xib */,
+				1862159D1CD465D100CD8611 /* BYHotelViewController.h */,
+				1862159E1CD465D100CD8611 /* BYHotelViewController.m */,
+				1862159F1CD465D100CD8611 /* BYHotelViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -714,6 +743,9 @@
 				1838B9911CCF143800BF2523 /* BYSpecialCell.h */,
 				1838B9921CCF143800BF2523 /* BYSpecialCell.m */,
 				1838B9931CCF143800BF2523 /* BYSpecialCell.xib */,
+				186215931CD4614400CD8611 /* BYSpecialDetailViewController.h */,
+				186215941CD4614400CD8611 /* BYSpecialDetailViewController.m */,
+				186215951CD4614400CD8611 /* BYSpecialDetailViewController.xib */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -922,6 +954,7 @@
 				180799171CCB0C440039B92E /* Tab_Favour_new.png in Resources */,
 				180207231CD1BC6400BB7F78 /* bgBanner_2.jpg in Resources */,
 				180207501CD2077B00BB7F78 /* item_0.png in Resources */,
+				186215921CD44B9A00CD8611 /* BYWebViewController.xib in Resources */,
 				1802073A1CD1DB6700BB7F78 /* replay@2x.png in Resources */,
 				1802072F1CD1BC6400BB7F78 /* userIcon.png in Resources */,
 				18D072071CCA08D8003C2DF7 /* Lato-Regular.ttf in Resources */,
@@ -941,6 +974,7 @@
 				182686CA1CD05A38001A2F48 /* BYFindCell.xib in Resources */,
 				180799201CCB0C440039B92E /* Tab_Find.png in Resources */,
 				180799291CCB0C440039B92E /* Tab_setting_new.png in Resources */,
+				186215A11CD465D100CD8611 /* BYHotelViewController.xib in Resources */,
 				1802073C1CD1DB6700BB7F78 /* viewed.png in Resources */,
 				1838B9951CCF143800BF2523 /* BYSpecialCell.xib in Resources */,
 				180207251CD1BC6400BB7F78 /* bgBanner_4.jpg in Resources */,
@@ -988,6 +1022,7 @@
 				18DE3CA71CCDB7F9005811A4 /* BYHomeCell.xib in Resources */,
 				180207271CD1BC6400BB7F78 /* bgBanner_6.jpg in Resources */,
 				182686E41CD0B2E8001A2F48 /* BYFavourCollectionCell.xib in Resources */,
+				1862159C1CD463CC00CD8611 /* BYFindDetailViewController.xib in Resources */,
 				1802072A1CD1BC6400BB7F78 /* femaleIcon@2x.png in Resources */,
 				180799301CCB0C440039B92E /* Tab_Special_new@2x.png in Resources */,
 				18D072061CCA08D8003C2DF7 /* Lato-Light.ttf in Resources */,
@@ -999,6 +1034,7 @@
 				1807991C1CCB0C440039B92E /* Tab_Favour@3x.png in Resources */,
 				180207431CD1EBA200BB7F78 /* BYHomeItemCell.xib in Resources */,
 				1871816F1CCB10FD0092F755 /* BYSpecialViewController.xib in Resources */,
+				186215971CD4614400CD8611 /* BYSpecialDetailViewController.xib in Resources */,
 				180799251CCB0C440039B92E /* Tab_home_new@3x.png in Resources */,
 				18D071F21CCA0895003C2DF7 /* Back_80*80.png in Resources */,
 			);
@@ -1077,7 +1113,10 @@
 				18DE3CA61CCDB7F9005811A4 /* BYHomeCell.m in Sources */,
 				187181731CCB11160092F755 /* BYFindViewController.m in Sources */,
 				182686C91CD05A38001A2F48 /* BYFindCell.m in Sources */,
+				186215911CD44B9A00CD8611 /* BYWebViewController.m in Sources */,
+				1862159B1CD463CC00CD8611 /* BYFindDetailViewController.m in Sources */,
 				187181641CCB10CF0092F755 /* BYSplashViewController.m in Sources */,
+				186215A01CD465D100CD8611 /* BYHotelViewController.m in Sources */,
 				18190EF51CCDFE7B00248633 /* BYBaseModel.m in Sources */,
 				1838B98A1CCF0E6300BF2523 /* BYSpecialModel.m in Sources */,
 				18D071BD1CC9CC63003C2DF7 /* BYMainViewController.m in Sources */,
@@ -1100,6 +1139,7 @@
 				18D071B71CC9CB24003C2DF7 /* BYBaseViewController.m in Sources */,
 				18D0720C1CCA203E003C2DF7 /* BYCustomTools.m in Sources */,
 				187181781CCB112C0092F755 /* BYFavouredTourViewController.m in Sources */,
+				186215961CD4614400CD8611 /* BYSpecialDetailViewController.m in Sources */,
 				1871816E1CCB10FD0092F755 /* BYSpecialViewController.m in Sources */,
 				1838B9941CCF143800BF2523 /* BYSpecialCell.m in Sources */,
 			);

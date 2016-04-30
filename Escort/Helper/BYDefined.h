@@ -62,6 +62,10 @@
 #define HOME_DATESOURCE_1   [NSString stringWithFormat:@"http://api.breadtrip.com/v2/index/"]
 #define HOME_DATESOURCE_2   [NSString stringWithFormat:@"http://api.breadtrip.com/v2/new_trip/spot/hot/list/?start=0"]
 #define HOME_DATESOURCE_3   [NSString stringWithFormat:@"http://open.qyer.com/qyer/recommands/trip?client_id=qyer_android&client_secret=9fcaae8aefc4f9ac4915&v=1&track_deviceid=865813022299481&track_app_version=6.8.1&track_app_channel=xiaomi&track_device_info=lcsh92_wet_tdd&track_os=Android4.2.2&app_installtime=1445319780896&lat=38.883593&lon=121.544474&type=index&page=1&count=10"]
+#define HOTEL_URL   [NSString stringWithFormat:@"http://open.qyer.com/qyer/hotel/hot_city_list?client_id=qyer_android&client_secret=9fcaae8aefc4f9ac4915&v=1&track_deviceid=865813022299481&track_app_version=6.8.1&track_app_channel=xiaomi&track_device_info=lcsh92_wet_tdd&track_os=Android4.2.2&app_installtime=1445319780896&lat=38.883651&lon=121.544459&count=9"];
+#define SIGHT_URL   [NSString stringWithFormat:@"http://m.tuniu.com/appHtml/ticketChannel/index/cityLetter/d"];
+#define VISA_URL    [NSString stringWithFormat:@"http://m.tuniu.com/dl/visa"];
+#define STOCK_URL   [NSString stringWithFormat:@"http://8.m.tuniu.com/msite/m"];
 
 
 

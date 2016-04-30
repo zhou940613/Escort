@@ -44,6 +44,7 @@
     [[UINavigationBar appearance] setTintColor:WhiteBackGroudColor];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     [[UINavigationBar appearance] setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundColor:UIColorFromHex(0x40aefe)];
     
 
     // show splash screen as default while app authentication with server

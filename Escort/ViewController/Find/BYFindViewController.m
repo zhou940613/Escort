@@ -7,6 +7,8 @@
 //
 
 #import "BYFindViewController.h"
+#import "BYFindDetailViewController.h"
+
 #import "BYFindCell.h"
 #import "BYFindModel.h"
 
@@ -46,6 +48,8 @@
     }];
     
 }
+
+#pragma mark -- TableView Delegate Method
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.findArray.count;
@@ -105,6 +109,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BYFindDetailViewController *detailVC = [[BYFindDetailViewController alloc] init];
+    
+    BYFindModel *model = [self.findArray objectAtIndex:indexPath.row];
+    detailVC.findModel = model;
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 

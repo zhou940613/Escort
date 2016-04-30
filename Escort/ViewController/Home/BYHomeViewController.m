@@ -18,6 +18,14 @@
 #import "BYHomeCell.h"
 #import "BYHomeItemCell.h"
 
+// viewContrillers
+#import "BYWebViewController.h"
+#import "BYTravelViewController.h"
+#import "BYHotelViewController.h"
+
+// Url Define
+
+
 @interface BYHomeViewController ()<UIScrollViewDelegate>
 
 @property(strong, nonatomic) IBOutlet UIView *headerView;
@@ -46,6 +54,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:YES];
+    [self.scrollerView setContentOffset:CGPointMake(0, 0)];
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -64,6 +73,9 @@
     self.tableView.tableHeaderView = self.headerView;
     self.tableView.rowHeight = 267.0;
     
+    // set roller autoroll
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(autoRoll) userInfo:nil repeats:YES];
+    
 #warning fix size for collectionView
     // 6/6s left-margin:18 cell spacing:20
     // 6p/6sp
@@ -80,6 +92,7 @@
         
         NSDictionary *rollerDic = dateBlock;
         self.rollerArray = [BYRoller ModelArr_With_DictionaryArr:rollerDic[@"data"][@"elements"][0][@"data"][0]];
+        [self.rollerArray addObject:self.rollerArray.firstObject];
         
         // set roller pictures
         self.scrollerView.pagingEnabled = YES;
@@ -88,6 +101,7 @@
         if (self.rollerArray.count >= 1) {
             
             self.scrollerView.contentSize = CGSizeMake(SCREEN_WIDTH * self.rollerArray.count, 0);
+            
             NSInteger temp = self.rollerArray.count;
             for (NSInteger i = 0; i < temp; i++) {
                 UIImageView *imageView = [[UIImageView alloc] init];
@@ -98,15 +112,13 @@
                 [imageView BYSD_SETIMG_NAME(rollermodel.image_url)];
                 [self.scrollerView addSubview:imageView];
                 
-                // gesture set
+                // tapGesture set
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jumpToDetailPage:)];
+                [imageView addGestureRecognizer:tap];
             }
-        
         }else{
-            
             self.scrollerView.hidden = YES;
         }
-        
-        
         [self.tableView reloadData];
     }];
     
@@ -142,8 +154,35 @@
     
 }
 
+#pragma mark -- Set Roller AutoRoll
 
+- (void)autoRoll{
+    
+    [self.scrollerView setContentOffset:CGPointMake(self.scrollerView.contentOffset.x + SCREEN_WIDTH, 0) animated:YES];
+    if (self.scrollerView.contentOffset.x == (self.rollerArray.count - 1) * SCREEN_WIDTH) {
+        [self.scrollerView setContentOffset:CGPointMake(0, 0)];
+    }
+}
 
+- (void)jumpToDetailPage:(UITapGestureRecognizer *)tap{
+    BYWebViewController *webVC = [[BYWebViewController alloc] init];
+    
+    CGFloat i = self.scrollerView.contentOffset.x / SCREEN_WIDTH;
+    BYRoller *rollermodel = [self.rollerArray objectAtIndex:i];
+    webVC.URLString = rollermodel.html_url;
+    
+    [self.navigationController pushViewController:webVC animated:YES];
+}
+
+#pragma mark -- HomeItem Set
+
+#pragma mark -- Travel Notes Link
+- (IBAction)moreButtonClick:(id)sender {
+    
+    BYTravelViewController *travelVC = [[BYTravelViewController alloc] init];
+    [self.navigationController pushViewController:travelVC animated:YES];
+    
+}
 
 #pragma mark -- TableView Delegate Method
 
@@ -165,7 +204,7 @@
     
     [cell.userIconImg sd_setImageWithURL:[NSURL URLWithString:model.avatar]];
     cell.userIconImg.layer.borderWidth = 1;
-    cell.userIconImg.layer.borderColor = [UIColor clearColor].CGColor;
+    cell.userIconImg.layer.borderColor = WhiteBackGroudColor.CGColor;
     cell.userIconImg.layer.masksToBounds = YES;
     cell.userIconImg.layer.cornerRadius = 50;
     
@@ -179,6 +218,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BYWebViewController *webVC = [[BYWebViewController alloc] init];
+    
+    BYHomeCellModel *model = [self.homeCellArray objectAtIndex:indexPath.row];
+    webVC.URLString = model.view_url;
+    
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 
@@ -215,6 +260,33 @@
     }
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    BYHotelViewController *hotelVC = [[BYHotelViewController alloc] init];
+    BYWebViewController *webViewVC = [[BYWebViewController alloc] init];
+    
+    switch (indexPath.row) {
+        case 0:
+            hotelVC.URLString = HOTEL_URL;
+            [self.navigationController pushViewController:hotelVC animated:YES];
+            break;
+        case 1:
+            [self.navigationController pushViewController:webViewVC animated:YES];
+            webViewVC.URLString = SIGHT_URL;
+            break;
+        case 2:
+            [self.navigationController pushViewController:webViewVC animated:YES];
+            webViewVC.URLString = VISA_URL;
+            break;
+        case 3:
+            [self.navigationController pushViewController:webViewVC animated:YES];
+            webViewVC.URLString = STOCK_URL;
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

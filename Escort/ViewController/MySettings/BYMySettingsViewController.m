@@ -10,9 +10,19 @@
 
 @interface BYMySettingsViewController ()
 
+@property(nonatomic, strong) NSString *flagNightMode;
+
 @end
 
 @implementation BYMySettingsViewController
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        _flagNightMode = @"夜间模式";
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -75,7 +85,7 @@
     else if (indexPath.section == 2){
         switch (indexPath.row) {
             case 0:
-                cell.textLabel.text = @"夜间模式";
+                cell.textLabel.text = self.flagNightMode;
                 break;
             case 1:
                 cell.textLabel.text = @"清除缓存";
@@ -112,10 +122,12 @@
         }
     }
     else if (indexPath.section == 2){
+        
         switch (indexPath.row) {
             case 0:
                 // night style
-            case 1:
+                self.flagNightMode = @"日间模式";
+             case 1:
                 // clear memory
             case 2:
                 // send email

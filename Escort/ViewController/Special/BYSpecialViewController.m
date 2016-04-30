@@ -7,6 +7,7 @@
 //
 
 #import "BYSpecialViewController.h"
+#import "BYSpecialDetailViewController.h"
 
 #import "BYSpecialCell.h"
 #import "BYCustomTools.h"
@@ -43,6 +44,8 @@
     }];
 }
 
+#pragma mark -- TableView Delegate Method
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return self.modelArray.count;
@@ -62,6 +65,16 @@
     cell.specialLabel.numberOfLines = NSIntegerMax;
     [cell.specialImg sd_setImageWithURL:[NSURL URLWithString:special.discoveryImg]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.tableViewSpecial deselectRowAtIndexPath:indexPath animated:YES];
+    
+    BYSpecialDetailViewController *detailVC = [[BYSpecialDetailViewController alloc] init];
+    BYSpecialModel *special = [self.modelArray objectAtIndex:indexPath.row];
+    detailVC.specialModel = special;
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

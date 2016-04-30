@@ -7,8 +7,11 @@
 //
 
 #import "BYFavouredTourViewController.h"
+#import "BYWebViewController.h"
+
 #import "BYFavourTableCell.h"
 #import "BYFavourCollectionCell.h"
+
 #import "BYFavourModel.h"
 
 @interface BYFavouredTourViewController ()
@@ -94,9 +97,19 @@
     else{
         cell.flagIconImg.hidden = YES;
     }
-
-    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    BYWebViewController *webVC = [[BYWebViewController alloc] init];
+    
+    BYFavourModel *model = [self.favourArray objectAtIndex:indexPath.row];
+    NSString *urlStr = [NSString stringWithFormat:@"http://web.breadtrip.com/hunter/product/%@/", model.product_id];
+    webVC.URLString = urlStr;
+    
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 #pragma mark -- CollectionView Delegate Method
@@ -125,6 +138,17 @@
     cell.layer.masksToBounds = YES;
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    BYWebViewController *webVC = [[BYWebViewController alloc] init];
+    
+    BYFavourModel *model = [self.favourArray objectAtIndex:indexPath.row];
+    NSString *urlStr = [NSString stringWithFormat:@"http://web.breadtrip.com/hunter/product/%@/", model.product_id];
+    webVC.URLString = urlStr;
+    
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

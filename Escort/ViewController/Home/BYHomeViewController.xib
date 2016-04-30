@@ -91,6 +91,9 @@
                             <rect key="frame" x="241" y="210" width="75" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                             <state key="normal" title="更多游记 &gt;"/>
+                            <connections>
+                                <action selector="moreButtonClick:" destination="-1" eventType="touchUpInside" id="ri6-Zt-8Kj"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
